@@ -9,10 +9,10 @@ const { Title } = Typography;
 
 const AvailableSpots = ({ parkedCars = [] }) => (
   <S.AvailableSpotsWrapper>
-    <S.AvailableSpotsNumber>
+    <Title level={4}>Available spots</Title>
+    <S.AvailableSpotsCircle>
       <S.AvailableSpotsText>{MAX_SPOTS - parkedCars.length}</S.AvailableSpotsText>
-    </S.AvailableSpotsNumber>
-    <Title>Available spots</Title>
+    </S.AvailableSpotsCircle>
   </S.AvailableSpotsWrapper>
 );
 

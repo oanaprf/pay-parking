@@ -3,11 +3,10 @@ import { Typography } from "antd";
 
 export const AvailableSpotsWrapper = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
 `;
 
-export const AvailableSpotsNumber = styled.div`
+export const AvailableSpotsCircle = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50px;
@@ -15,9 +14,13 @@ export const AvailableSpotsNumber = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 20px;
 `;
 
 export const AvailableSpotsText = styled(Typography.Text)`
   color: white;
-  font-size: 30px;
+  font-size: 3em;
+  font-weight: bold;
+  margin-left: -2px;
+  margin-top: -4px;
 `;
