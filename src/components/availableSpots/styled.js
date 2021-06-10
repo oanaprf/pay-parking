@@ -19,5 +19,5 @@ export const AvailableSpotsNumber = styled.div`
 
 export const AvailableSpotsText = styled(Typography.Text)`
   color: white;
-  font-size: 20px;
+  font-size: 30px;
 `;
