@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Typography, Button, Input, message } from "antd";
+import { Typography, Input, message } from "antd";
 import PropTypes from "prop-types";
 import moment from "moment";
 
 import * as S from "./styled";
+import * as C from "../../constants";
 
 const { Title } = Typography;
 
@@ -17,6 +18,8 @@ const ParkCar = ({ parkedCars = [], setParkedCars }) => {
       message.error("Car number must be of type JJNNLLL, BNNLLL or BNNNLLL");
     } else if (parkedCars.some(({ carNumber: number }) => number === carNumber))
       message.error("A car with this number is already parked.");
+    else if (parkedCars.length === C.MAX_SPOTS)
+      message.error("There are no spots left. We're sorry!");
     else {
       const currentTime = moment();
       setParkedCars([...parkedCars, { carNumber: carNumber, startTime: currentTime }]);
@@ -29,11 +32,17 @@ const ParkCar = ({ parkedCars = [], setParkedCars }) => {
 
   return (
     <S.ParkCarWrapper>
-      <Title level={3}>Park your car</Title>
-      <Input placeholder="Your car number" onChange={onChange} value={carNumber} />
-      <Button type="primary" onClick={onClick} disabled={!carNumber}>
-        Park your car
-      </Button>
+      <S.Wrapper>
+        <S.TitleWrapper>
+          <Title level={3} style={{ color: "#0a3a66" }}>
+            Park your car
+          </Title>
+        </S.TitleWrapper>
+        <Input placeholder="Your car number" onChange={onChange} value={carNumber} />
+      </S.Wrapper>
+      <S.Button type="primary" onClick={onClick}>
+        Park
+      </S.Button>
     </S.ParkCarWrapper>
   );
 };

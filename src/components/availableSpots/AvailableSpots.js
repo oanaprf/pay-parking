@@ -9,7 +9,9 @@ const { Title } = Typography;
 
 const AvailableSpots = ({ parkedCars = [] }) => (
   <S.AvailableSpotsWrapper>
-    <Title level={4}>Available spots</Title>
+    <Title level={4} style={{ color: "#0a3a66" }}>
+      Available spots
+    </Title>
     <S.AvailableSpotsCircle>
       <S.AvailableSpotsText>{MAX_SPOTS - parkedCars.length}</S.AvailableSpotsText>
     </S.AvailableSpotsCircle>

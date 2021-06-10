@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Button, Select, message } from "antd";
+import { Typography, Select, message } from "antd";
 import PropTypes from "prop-types";
 
 import * as S from "./styled";
@@ -33,17 +33,27 @@ const ExitParking = ({ parkedCars = [], setParkedCars }) => {
 
   return (
     <S.ExitParkingWrapper>
-      <Title level={3}>Exit parking</Title>
-      <Select onChange={onChange} placeholder="Choose your car number" value={carNumber}>
-        {parkedCars.map(({ carNumber }) => (
-          <Select.Option key={carNumber} value={carNumber}>
-            {carNumber}
-          </Select.Option>
-        ))}
-      </Select>
-      <Button type="primary" onClick={onClick} disabled={!carNumber}>
-        Exit parking
-      </Button>
+      <S.Wrapper>
+        <S.TitleWrapper>
+          <Title level={3} style={{ color: "#0a3a66" }}>
+            Exit parking
+          </Title>
+        </S.TitleWrapper>
+        <Select
+          onChange={onChange}
+          placeholder="Choose your car number"
+          value={carNumber}
+        >
+          {parkedCars.map(({ carNumber }) => (
+            <Select.Option key={carNumber} value={carNumber}>
+              {carNumber}
+            </Select.Option>
+          ))}
+        </Select>
+      </S.Wrapper>
+      <S.Button type="primary" onClick={onClick}>
+        Exit
+      </S.Button>
     </S.ExitParkingWrapper>
   );
 };

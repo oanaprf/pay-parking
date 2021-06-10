@@ -10,12 +10,6 @@ export const AppWrapper = styled.div`
   background-color: #f4faff;
 `;
 
-export const FlexWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-`;
-
 export const Header = styled.div`
   display: flex;
   width: 100%;
@@ -26,6 +20,19 @@ export const Header = styled.div`
 
 export const Body = styled.div`
   display: flex;
-  flex-grow: 1;
+  flex-direction: column;
   align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  padding: 50px 50px;
+`;
+
+export const CardView = styled.div`
+  background-color: white;
+  border-radius: 5px;
+  flex-grow: 0.3;
+  margin: 30px 0;
+  padding: 30px 40px;
+  width: 27%;
+  box-shadow: rgba(0, 0, 0, 0.01) 10px 10px 10px;
 `;

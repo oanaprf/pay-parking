@@ -4,6 +4,8 @@ import { Typography } from "antd";
 export const AvailableSpotsWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-right: 50px;
+  margin-top: 40px;
 `;
 
 export const AvailableSpotsCircle = styled.div`
