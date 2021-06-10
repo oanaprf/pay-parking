@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import { Typography } from "antd";
 
 import * as S from "./styled";
+import theme from "../../theme";
 
 const { Title } = Typography;
 
 const ParkedCars = ({ parkedCars = [] }) => (
   <S.ParkedCarsWrapper>
-    <Title level={3} style={{ color: "#0a3a66" }}>
+    <Title level={3} style={{ color: theme.darkerColor }}>
       Parked cars
     </Title>
     <S.List

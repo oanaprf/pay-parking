@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Menu as AntdMenu } from "antd";
 
+import theme from "../../theme";
+
 export const Menu = styled(AntdMenu)`
-  background-color: #f4faff;
+  background-color: ${theme.lighterColor};
   width: 27%;
 `;

@@ -4,12 +4,13 @@ import PropTypes from "prop-types";
 
 import * as S from "./styled";
 import { MAX_SPOTS } from "../../constants";
+import theme from "../../theme";
 
 const { Title } = Typography;
 
 const AvailableSpots = ({ parkedCars = [] }) => (
   <S.AvailableSpotsWrapper>
-    <Title level={4} style={{ color: "#0a3a66" }}>
+    <Title level={4} style={{ color: theme.darkerColor }}>
       Available spots
     </Title>
     <S.AvailableSpotsCircle>

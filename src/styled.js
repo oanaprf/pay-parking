@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import theme from "./theme";
+
 export const AppWrapper = styled.div`
   width: 100vw;
   height: 100vh;
@@ -7,7 +9,7 @@ export const AppWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f4faff;
+  background-color: ${theme.lighterColor};
 `;
 
 export const Header = styled.div`
@@ -28,7 +30,7 @@ export const Body = styled.div`
 `;
 
 export const CardView = styled.div`
-  background-color: white;
+  background-color: ${theme.white};
   border-radius: 5px;
   flex-grow: 0.3;
   margin: 30px 0;

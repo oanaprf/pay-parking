@@ -14,7 +14,7 @@ import { FIRST_HOUR_RATE, DEFAULT_HOUR_RATE } from "./constants";
 
 export const getSummary = (startTime) => {
   const parkedTimeInMinutes = moment.duration(
-    moment().add(0, "minutes").diff(startTime, "minutes")
+    moment().diff(startTime, "minutes") //to test => .add(60, "minutes")
   );
   const hoursParkedTime = Math.floor(parkedTimeInMinutes / 60);
   const minutesParkedTime = parkedTimeInMinutes % 60;

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import * as S from "./styled";
 import { getSummary, getSummaryMessage } from "../../utils";
+import theme from "../../theme";
 
 const { Title } = Typography;
 
@@ -35,7 +36,7 @@ const ExitParking = ({ parkedCars = [], setParkedCars }) => {
     <S.ExitParkingWrapper>
       <S.Wrapper>
         <S.TitleWrapper>
-          <Title level={3} style={{ color: "#0a3a66" }}>
+          <Title level={3} style={{ color: theme.darkerColor }}>
             Exit parking
           </Title>
         </S.TitleWrapper>

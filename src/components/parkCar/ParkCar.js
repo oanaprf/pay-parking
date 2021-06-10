@@ -5,6 +5,7 @@ import moment from "moment";
 
 import * as S from "./styled";
 import * as C from "../../constants";
+import theme from "../../theme";
 
 const { Title } = Typography;
 
@@ -34,7 +35,7 @@ const ParkCar = ({ parkedCars = [], setParkedCars }) => {
     <S.ParkCarWrapper>
       <S.Wrapper>
         <S.TitleWrapper>
-          <Title level={3} style={{ color: "#0a3a66" }}>
+          <Title level={3} style={{ color: theme.darkerColor }}>
             Park your car
           </Title>
         </S.TitleWrapper>
